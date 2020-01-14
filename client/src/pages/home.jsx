@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { render } from 'react-dom';
 import axios from 'axios';
 import PlayerList from '../components/PlayerList';
+import Header from '../components/Header';
 
 class Home extends Component {
   state = { players: [] }
@@ -20,7 +21,9 @@ class Home extends Component {
     const { players } = this.state
     return(
       <>
+      <Header />
         <PlayerList playerData={players}/>
+  
       </>
     )
   }

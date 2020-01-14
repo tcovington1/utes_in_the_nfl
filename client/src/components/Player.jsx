@@ -1,9 +1,18 @@
 import React from 'react'
+import styled from 'styled-components';
+import DataRow from './dataRow';
 
-const Player = ({full_name, team}) => (
+const TableItem = styled.div`
+
+`;
+
+const Player = ({full_name, team, position }) => (
   <>
-    {full_name}
-    {team}
+  <DataRow>
+    <h3>{position}</h3>
+    <h3>{full_name}</h3>
+    <h3>{team}</h3>
+  </DataRow>
   </>
 );
 

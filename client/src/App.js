@@ -5,6 +5,7 @@ import { Switch, Route } from 'react-router-dom';
 
 
 import Home from './pages/home';
+import PlayerForm from './pages/PlayerForm'
 
 class App extends Component {
   render() {
@@ -13,6 +14,7 @@ class App extends Component {
   <>
   <Switch>
     <Route exact path='/' component={Home} />
+    <Route exact path='/playerform' component={PlayerForm} />
   </Switch>
   </>
 

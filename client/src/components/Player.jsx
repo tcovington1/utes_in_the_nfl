@@ -1,18 +1,21 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import DataRow from './dataRow';
 
-const TableItem = styled.div`
-
+const StyledLink = styled.a`
+  text-decoration: none;
 `;
 
 const Player = ({full_name, team, position }) => (
   <>
-  <DataRow>
-    <h3>{position}</h3>
-    <h3>{full_name}</h3>
-    <h3>{team}</h3>
-  </DataRow>
+    <StyledLink>
+      <DataRow>
+      <h3>{position}</h3>
+      <h3>{full_name}</h3>
+      <h3>{team}</h3>
+      </DataRow>
+    </StyledLink>
   </>
 );
 

@@ -1,8 +1,7 @@
-The last think I did was create Kylie fitts in the rails console. I deleted the DOB, 
-we may need to update the DOB to a string of figure out how to add that data type.
- 
- -This could give us issues later on on the front end
+branch playerform
 
- => #<ActiveRecord::Relation [#<Player id: 1, full_name: "Kylie Fitts", age: 25, starter: true, position: "DE", team: "Arizona Cardinals", DOB: nil, bio: "He beat several blockers at the Senior Bowl just b...", created_at: "2020-01-12 22:35:54", updated_at: "2020-01-12 22:35:54">]>
+I'm in the process of building the Player form, using Henry's react router tutorial
 
- I have not sent this to github yet or committed it
+Last left off in Home.jsx line 22 to add a player
+
+I've added and it's showing on the page but I can't type. Must be the handleChange

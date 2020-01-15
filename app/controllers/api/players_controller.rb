@@ -5,11 +5,11 @@ class Api::PlayersController < ApplicationController
   end
 
   def create
-    @player = Player.save(player_params)
-    if player.save
+    @player = Player.new(player_params)
+    if @player.save
       render json: @player
     else
-      render json: { erros: @item.errors }, stats: :unprocessable_entity
+      render json: { erros: @players.errors }, stats: :unprocessable_entity
     end
   end
 

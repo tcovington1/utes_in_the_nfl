@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components';
 import Player from './Player';
 
+
 import DataRow from '../components/dataRow'
 
 const TableHeader = styled.div`
@@ -13,7 +14,10 @@ const TableHeader = styled.div`
   background-color: #CC0000;
 `;
 
-const PlayerList = ({ playerData }) => (
+
+
+const PlayerList = ({ playerData, update, rm }) => (
+
   <div>
       <TableHeader>
         <h2>Position</h2>
@@ -22,10 +26,16 @@ const PlayerList = ({ playerData }) => (
       </TableHeader>
     {
       playerData.map( player => 
-        <Player key={player.id} {...player} />
+        <Player 
+        key={player.id} 
+        {...player} 
+        update={update}
+        rm={rm}
+        />
+        // 
       )
     }
   </div>
-);
+  );
 
 export default PlayerList;

@@ -14,14 +14,14 @@ class Api::PlayersController < ApplicationController
   end
 
   def update
-    @player = @player.find(params[:id])
-    # if @player.update(player_params)
-    #   render json: @player
-    # else
-    #   render json: { erros: @item.errors }, stats: :unprocessable_entity
-    # end
-    @player.update(complete: !@player.complete)
-    render json: @player
+    @player = Player.find(params[:id])
+    if @player.update(player_params)
+      render json: @player
+    else
+      render json: { erros: @item.errors }, stats: :unprocessable_entity
+    end
+    # @player.update(complete: !@player.complete)
+    # render json: @player
   end
   
   def destroy

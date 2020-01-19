@@ -1,7 +1,6 @@
-branch playerform
+branch : master
 
-I'm in the process of building the Player form, using Henry's react router tutorial
+Add is working. pushed to master and merged. You are working on the master branch
 
-Last left off in Home.jsx line 22 to add a player
-
-I've added and it's showing on the page but I can't type. Must be the handleChange
+styling 
+edit, delete

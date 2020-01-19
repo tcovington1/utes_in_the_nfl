@@ -16,7 +16,7 @@ const StyledInput = styled.input`
 const StyledButton = styled.button`
   width: 10em;
   padding: 1em;
-  background-color: #BEEB9F;
+  background-color: #000;
   color: white;
   border-radius: 15%;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
@@ -26,6 +26,12 @@ const StyledButton = styled.button`
 class PlayerForm extends Component {
   state = { full_name: '', age: 0, starter: false, position: '', team: '', bio: '', DOB: 0 } 
 
+  componentDidMount() {
+    if (this.props.id) {
+      this.setState({ full_name: this.props.full_name })
+    }
+  }
+
   handleChange = (e) => {
     const { name, value } = e.target;
     this.setState({ [name]: value })
@@ -33,7 +39,13 @@ class PlayerForm extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    this.props.add(this.state)
+    if (this.props.id) {
+      this.props.update(this.props.id, this.state)
+      this.props.toggleEdit()
+    } else {
+      this.props.add(this.state)
+    }
+
     this.setState({ full_name: '', age: 0, starter: false, position: '', team: '', bio: '', DOB: 0 })
   }
 
@@ -67,6 +79,7 @@ class PlayerForm extends Component {
         />
         <label>Starter? 
           <StyledInput type="checkbox"
+            
             placeholder='Starter?'
             label='starter'
             name='starter'
@@ -77,6 +90,7 @@ class PlayerForm extends Component {
           />
         </label>
         <StyledInput type="text"
+          required
           placeholder='Position'
           label='position'
           name='position'
@@ -85,6 +99,7 @@ class PlayerForm extends Component {
         
         />
         <StyledInput type="text"
+          required
           placeholder='Team'
           label='team'
           name='team'
@@ -93,6 +108,7 @@ class PlayerForm extends Component {
         
         />
         <StyledInput type="text"
+          required
           placeholder='Bio'
           label='bio'
           name='bio'

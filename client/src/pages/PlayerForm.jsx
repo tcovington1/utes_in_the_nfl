@@ -24,7 +24,7 @@ const StyledButton = styled.button`
 `;
 
 class PlayerForm extends Component {
-  state = { full_name: '', age: 0, starter: false, position: '', team: '', bio: '', DOB: 0 } 
+  state = { full_name: '', age: 0, starter: false, position: '', team: '', bio: '', DOB: 0, playoff_wins: 0 } 
 
   componentDidMount() {
     if (this.props.id) {
@@ -46,11 +46,11 @@ class PlayerForm extends Component {
       this.props.add(this.state)
     }
 
-    this.setState({ full_name: '', age: 0, starter: false, position: '', team: '', bio: '', DOB: 0 })
+    this.setState({ full_name: '', age: 0, starter: false, position: '', team: '', bio: '', DOB: 0, playoff_wins: 0 })
   }
 
   render() {
-    const { full_name, age, starter, position, team, bio, DOB } = this.state
+    const { full_name, age, starter, position, team, bio, DOB, playoff_wins } = this.state
     return (
       <StyledForm onSubmit={this.handleSubmit}> 
         <StyledInput type="text"
@@ -104,6 +104,15 @@ class PlayerForm extends Component {
           label='team'
           name='team'
           value={team}
+          onChange={this.handleChange}
+        
+        />
+        <StyledInput type="number"
+          required
+          placeholder='Playoff Wins'
+          label='playoff_wins'
+          name='playoff_wins'
+          value={playoff_wins}
           onChange={this.handleChange}
         
         />

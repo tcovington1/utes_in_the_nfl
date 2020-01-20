@@ -9,7 +9,7 @@ const StyledLink = styled.a`
   text-decoration: none;
 `;
 
-const Player = ({full_name, team, position, update, rm, id, ...player }) => {
+const Player = ({full_name, team, position, playoff_wins, update, rm, id, ...player }) => {
   const [isEditing, setIsEditing] = useState(false);
 
   const editToggle = () => setIsEditing(!isEditing);
@@ -21,6 +21,8 @@ const Player = ({full_name, team, position, update, rm, id, ...player }) => {
       <h3>{position}</h3>
       <h3>{full_name}</h3>
       <h3>{team}</h3>
+      <h3>{playoff_wins}</h3>
+
       <Button onClick={editToggle}>Edit</Button>
       <Button onClick={() => rm(id)}>Delete</Button>
     {/* {

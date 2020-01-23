@@ -5,7 +5,7 @@ const StyledForm = styled.form`
   display: flex;
   flex-direction: column;
   width: 33%;
-  padding: 1em;
+  padding: 1em 20em;
 `;
 
 const StyledInput = styled.input`
@@ -26,9 +26,19 @@ const StyledButton = styled.button`
 class PlayerForm extends Component {
   state = { full_name: '', age: 0, starter: false, position: '', team: '', bio: '', DOB: 0, playoff_wins: 0 } 
 
+  
   componentDidMount() {
+    const { fullName, age, position, team, playoffWins, bio, dob} =  this.props
     if (this.props.id) {
-      this.setState({ full_name: this.props.full_name })
+      this.setState({ 
+        full_name: fullName, 
+        age: age,
+        dob: dob,
+        position: position,
+        team: team,
+        playoff_wins: playoffWins,
+        bio: bio,
+      })
     }
   }
 

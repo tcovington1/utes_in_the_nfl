@@ -25,6 +25,7 @@ class Home extends Component {
     .then( res => {   //we just upadated in the back-end, now we need to update the front-end state
       const { players } = this.state;            //res.data is the added item
       this.setState({ players: [ ...players, res.data ] })
+      this.setState({ isAddingPlayer: false })
     })
     .catch( err => {
       console.log(err)
@@ -58,23 +59,22 @@ class Home extends Component {
     })
   }
 
-  editToggle = () => this.setState(!this.state.isAddingPlayer);
+  editToggle = () => this.setState({ isAddingPlayer: !this.state.isAddingPlayer});
 
 
   render() {
     const { players, isAddingPlayer } = this.state
     return(
       <>
-      <Header />
         <PlayerList playerData={players} update={this.updatePlayer} rm={this.deletePlayer} />
-      <Button onClick={this.editToggle}>Add Player</Button>
+        <Button onClick={this.editToggle}>Add Player</Button>
 
-      {
-        isAddingPlayer ? 
-        <PlayerForm add={this.addPlayer} />
-        :
-        <div></div>
-      }
+        {
+          isAddingPlayer ? 
+          <PlayerForm add={this.addPlayer} />
+          :
+          <div></div>
+        }
       </>
     )
   }

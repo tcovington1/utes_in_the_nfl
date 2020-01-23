@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import Logo from './Logo';
 
 const HeaderContainer = styled.div`
- margin: none;
+ margin: 0;
   width: 100%;
   height: 5em;
   background-color: #374140;

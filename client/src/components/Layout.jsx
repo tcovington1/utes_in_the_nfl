@@ -11,7 +11,6 @@ const LayoutContainer = styled.div`
 const Layout = ({children}) => {
   return(
   <>
-    <Header />
     <LayoutContainer>
       {children}
     </LayoutContainer>

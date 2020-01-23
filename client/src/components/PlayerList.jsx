@@ -16,7 +16,7 @@ const TableHeader = styled.div`
 
 
 
-const PlayerList = ({ playerData, update, rm }) => (
+const PlayerList = ({ playerData, update, rm,  }) => (
 
   <div>
       <TableHeader>

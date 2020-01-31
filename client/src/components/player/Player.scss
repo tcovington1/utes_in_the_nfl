@@ -1,0 +1,49 @@
+.player-image {
+
+  width: 100%;
+  height: 70%;
+  // border: 2px blue solid;
+  background-color: lightgray;
+  border-radius: 5px 0px 0px 0px;
+}
+
+.player-details {
+  width: 100%;
+  height: 30%;
+  // border: 2px red solid;
+  display: flex;
+  justify-content: space-around;
+  border-radius: 5px 0px 0px 0px;
+
+  // box-shadow: 0px 0px 0px px rgba(0, 0, 0, 0.1);
+
+}
+
+.player-card-btn-div {
+  display: flex;
+  justify-content: space-around;
+  padding: 1em 0em;
+}
+
+.card-row {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.p-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.player-link {
+  text-decoration: none;
+
+  &:hover {
+    color: green;
+  }
+}
+
+.pic {
+  width: 100%
+}

@@ -4,6 +4,14 @@ class Api::PlayersController < ApplicationController
     render json: Player.all
   end
 
+  def show
+    # binding.pry
+    # @player = Player.find(params[:id])
+    # render json: @player
+    render json: Player.find(params[:id])
+  end
+  
+
   def create
     @player = Player.new(player_params)
     if @player.save

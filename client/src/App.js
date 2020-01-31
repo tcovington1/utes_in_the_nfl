@@ -7,6 +7,8 @@ import ShowPlayer from './components/ShowPlayer';
 import PlayerForm from './pages/PlayerForm';
 import NoMatch from './pages/NoMatch';
 import Header from './components/Header';
+// import { Container } from 'semantic-ui-react'
+
 
 class App extends Component {
   render() {
@@ -14,12 +16,14 @@ class App extends Component {
 
   <>
   <Header />
-  <Switch>
-    <Route exact path='/' component={Home} />
-    <Route exact path='/playerform' component={PlayerForm} />
-    <Route exact path='/api/players/:id' component={ShowPlayer} />
-    <Route component={NoMatch} />
-  </Switch>
+  {/* <Container> */}
+    <Switch>
+      <Route exact path='/' component={Home} />
+      <Route exact path='/playerform' component={PlayerForm} />
+      <Route exact path='/api/players/:id' component={ShowPlayer} />
+      <Route component={NoMatch} />
+    </Switch>
+  {/* </Container> */}
   </>
 
   );

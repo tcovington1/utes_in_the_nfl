@@ -1,5 +1,6 @@
-import React, { Component } from 'react'
-import styled from 'styled-components'
+import React, { Component } from 'react';
+import styled from 'styled-components';
+import { Button, Form } from 'semantic-ui-react';
 
 const StyledForm = styled.form`
   display: flex;
@@ -62,7 +63,7 @@ class PlayerForm extends Component {
   render() {
     const { full_name, age, starter, position, team, bio, DOB, playoff_wins } = this.state
     return (
-      <StyledForm onSubmit={this.handleSubmit}> 
+      <Form onSubmit={this.handleSubmit}> 
         <StyledInput type="text"
           placeholder='Full Name'
           label='full_name'
@@ -135,8 +136,8 @@ class PlayerForm extends Component {
           onChange={this.handleChange}
         
         />
-        <StyledButton type='submit'>Submit</StyledButton>
-      </StyledForm>
+        <Button type='submit'>Submit</Button>
+      </Form>
     )
   }
 }

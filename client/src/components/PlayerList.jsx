@@ -1,9 +1,10 @@
 import React from 'react'
 import styled from 'styled-components';
-import Player from './Player';
+import Player from './player/Player';
+import './player/Player.scss'
 
 
-import DataRow from '../components/dataRow'
+import DataRow from './player-card/PlayerCard'
 
 const TableHeader = styled.div`
   width: 70%;
@@ -18,19 +19,19 @@ const TableHeader = styled.div`
 
 const PlayerList = ({ playerData, update, rm,  }) => (
 
-  <div>
-      <TableHeader>
+  <div className='card-row'>
+      {/* <TableHeader>
         <h2>Position</h2>
         <h2>Name</h2>
         <h2>Team</h2>
-      </TableHeader>
+      </TableHeader> */}
     {
       playerData.map( player => 
         <Player 
-        key={player.id} 
-        {...player} 
-        update={update}
-        rm={rm}
+          key={player.id} 
+          {...player} 
+          update={update}
+          rm={rm}
         />
         // 
       )

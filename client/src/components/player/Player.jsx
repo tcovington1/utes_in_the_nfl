@@ -22,27 +22,27 @@ const Player = ({selectPlayer, full_name, age, team, position, playoff_wins, upd
   <>
         <Bounce bottom cascade>
 
-    <Link to={`/api/players/${id}`} className='player-link'>
     {/* <Link to= className='player-link'> */}
         <StyledCard >
           <div className="player-image">
             <img src={Pic} alt="" className='pic'/>
           </div>
+    <Link to={`/api/players/${id}`} className='player-link'>
           <div className="player-details">
             <SubHead>{position}</SubHead>
             <SubHead>{full_name}</SubHead>
             <SubHead>{team}</SubHead>
             {/* <SubHead>{playoff_wins}</SubHead> */}
           </div>
+          </Link>  
+          {/* {
+            editToggle ? (<PlayerForm />) : (<div></div>)
+          } */}
           <div className="player-card-btn-div">
             <Button onClick={editToggle}>Edit</Button>
             <Button onClick={() => rm(id)}>Delete</Button>
           </div>
-          {/* {
-            editToggle ? (<PlayerForm />) : (<div></div>)
-          } */}
         </StyledCard>
-      </Link>  
       {
         isEditing ? 
         <PlayerForm 

@@ -1,0 +1,23 @@
+
+.player-show-heading {
+  margin: 2em 0em 2em 5em;
+}
+
+.player-show-cont {
+  display: flex;
+  margin-top: 5em;
+  height: 65vh;
+  width: 75%;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  // border: 1px blue solid;
+}
+
+.player-pic {
+  // border: 1px green solid;
+}
+.player-info {
+  // border: 1px red solid;
+  width: 30%;
+
+}

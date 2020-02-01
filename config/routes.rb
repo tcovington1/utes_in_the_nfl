@@ -3,7 +3,6 @@ Rails.application.routes.draw do
   namespace :api do
     resources :players
     get '/players/:id', to: 'players#show'
-
   end
 
 end

@@ -3,7 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 
 
 import Home from './pages/home';
-import ShowPlayer from './components/ShowPlayer';
+import ShowPlayer from './components/player-show/ShowPlayer';
 import PlayerForm from './pages/PlayerForm';
 import NoMatch from './pages/NoMatch';
 import Header from './components/Header';

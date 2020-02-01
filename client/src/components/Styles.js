@@ -7,7 +7,8 @@ export const Button = styled.button`
   cursor: pointer;
   transition: transform 0.3s ease;
   box-shadow: 0px 3px 10px rgba(25,17,34,0.05);
-  padding: 1em 2em;
+  padding: .75em 1em;
+  margin-bottom: .5em;
 
   &:hover {
     transform: translateY(-3px)

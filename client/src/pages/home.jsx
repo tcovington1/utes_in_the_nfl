@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { render } from 'react-dom';
 import axios from 'axios';
 import PlayerList from '../components/PlayerList';
-import Header from '../components/Header';
+import Header from '../components/NavBar';
 import PlayerForm from './PlayerForm';
 import { Button } from '../components/Styles';
 

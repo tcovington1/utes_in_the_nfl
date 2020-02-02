@@ -6,7 +6,9 @@ import Home from './pages/home';
 import ShowPlayer from './components/player-show/ShowPlayer';
 import PlayerForm from './pages/PlayerForm';
 import NoMatch from './pages/NoMatch';
-import Header from './components/Header';
+import Login from './components/auth/Login'
+import Register from './components/auth/Register'
+import NavBar from './components/NavBar';
 // import { Container } from 'semantic-ui-react'
 
 
@@ -15,12 +17,16 @@ class App extends Component {
   return (
 
   <>
-  <Header />
+  <NavBar />
   {/* <Container> */}
     <Switch>
       <Route exact path='/' component={Home} />
       <Route exact path='/playerform' component={PlayerForm} />
       <Route exact path='/api/players/:id' component={ShowPlayer} />
+      {/* Auth Routes */}
+      <Route exact path='/login' component={Login} />
+      <Route exact path='/register' component={Register} />
+
       <Route component={NoMatch} />
     </Switch>
   {/* </Container> */}

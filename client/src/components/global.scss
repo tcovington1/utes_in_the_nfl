@@ -11,3 +11,21 @@
   text-decoration: none;
   color: black;
 }
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  // border: 1px white solid;
+  width: 50%;
+
+  &:ul li {
+    list-style-type: none;
+    // color: red
+
+  }
+}
+.nav-links {
+  text-decoration: none;
+  color: white;
+}
+

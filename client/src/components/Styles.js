@@ -16,7 +16,7 @@ export const Button = styled.button`
 `;
 
 export const StyledCard = styled.div`
-  width: 80%;
+  width: 75%;
   height: 20em;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
   display: flex;

@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 
 const Logo = () => (
-  <h1 style={{color: 'white', paddingTop: '.60em', display: 'flex', justifyContent: 'center'}}>
+  <h1 style={{color: 'black'}}>
     <Link to='/' style={{color: 'white', textDecoration: 'none',}}>
       Utes In The NFL
     </Link>
